@@ -1,0 +1,3 @@
+app.get('/payout', (req, res) => {
+  res.json({ paypal: "charlesbuchanan89@yahoo.com", crypto: "awaiting-reactivation" });
+});
