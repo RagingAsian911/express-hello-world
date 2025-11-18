@@ -61,4 +61,20 @@ const html = `
 // use the exposed API in the renderer
 window.myAPI.doAThing()
 // use the exposed API in the renderer
-window.myAPI.doAThing()
+window.myAPI.doAThing()// ❌ Bad code
+contextBridge.exposeInMainWorld('myAPI', {
+  send: ipcRenderer.send
+})// ✅ Good code
+contextBridge.exposeInMainWorld('myAPI', {
+  loadPreferences: () => ipcRenderer.invoke('load-prefs')
+})contextBridge.exposeInMainWorld('electronAPI', {
+  loadPreferences: () => ipcRenderer.invoke('load-prefs')
+})export interface IElectronAPI {
+  loadPreferences: () => Promise<void>,
+}
+
+declare global {
+  interface Window {
+    electronAPI: IElectronAPI
+  }
+}window.electronAPI.loadPreferences()
