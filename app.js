@@ -60,3 +60,5 @@ const html = `
 </html>
 // use the exposed API in the renderer
 window.myAPI.doAThing()
+// use the exposed API in the renderer
+window.myAPI.doAThing()
