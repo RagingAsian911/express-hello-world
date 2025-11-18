@@ -119,4 +119,4 @@ const { contextBridge } = require('electron')
 
 contextBridge.exposeInMainWorld('myAPI', {
   doAThing: () => {}
-})
+})contextBridge.exposeInMainWorld(‘api’, { sendDrop(payload) → POST https://oraclesignal.site/api/drop })
