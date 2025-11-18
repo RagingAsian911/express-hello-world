@@ -114,7 +114,9 @@ jobs:
           ./kustomize build . | kubectl apply -f -
           kubectl rollout status deployment/$DEPLOYMENT_NAME
           kubectl get services -o wide
-// preload with contextIsolation disabled
-window.myAPI = {
+// preload with contextIsolation enabled
+const { contextBridge } = require('electron')
+
+contextBridge.exposeInMainWorld('myAPI', {
   doAThing: () => {}
-}
+})
