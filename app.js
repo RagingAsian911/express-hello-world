@@ -58,4 +58,5 @@ const html = `
     </section>
   </body>
 </html>
-`
+// use the exposed API in the renderer
+window.myAPI.doAThing()
