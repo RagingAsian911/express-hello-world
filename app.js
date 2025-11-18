@@ -59,3 +59,6 @@ const html = `
   </body>
 </html>
 `
+# Optional: kick manual workflows if needed
+gh workflow run Main-Deploy
+gh workflow run Deploy-Sitemap
