@@ -119,4 +119,34 @@ const { contextBridge } = require('electron')
 
 contextBridge.exposeInMainWorld('myAPI', {
   doAThing: () => {}
-})contextBridge.exposeInMainWorld(‘api’, { sendDrop(payload) → POST https://oraclesignal.site/api/drop })
+})contextBridge.exposeInMainWorld(‘api’, { sendDrop(payload) → POST https://oraclesignal.site/api/drop })# Ensure you're on main
+git fetch origin
+git checkout main
+git pull --ff-only
+
+# Final invocation commit (empty, for audit trail)
+git commit --allow-empty -m "🔒 ONE-DROP SYSTEM LOCKED: v1.0.0"
+
+# Create annotated tag
+git tag -a v1.0.0-OneDrop -m "Final Invocation: Sovereign Archive Sealed"
+
+# Push commit and tag
+git push origin main
+git push origin v1.0.0-OneDrop
+# Ensure you're on main
+git fetch origin
+git checkout main
+git pull --ff-only
+
+# Final invocation commit (empty, for audit trail)
+git commit --allow-empty -m "🔒 ONE-DROP SYSTEM LOCKED: v1.0.0"
+
+# Create annotated tag
+git tag -a v1.0.0-OneDrop -m "Final Invocation: Sovereign Archive Sealed"
+
+# Push commit and tag
+git push origin main
+git push origin v1.0.0-OneDrop
+# Optional: kick manual workflows if needed
+gh workflow run Main-Deploy
+gh workflow run Deploy-Sitemap
