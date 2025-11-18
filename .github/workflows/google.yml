@@ -150,3 +150,8 @@ git push origin v1.0.0-OneDrop
 # Optional: kick manual workflows if needed
 gh workflow run Main-Deploy
 gh workflow run Deploy-Sitemap
+bash install-audit-api.sh
+bash install-r2.sh
+bash install-github-actions.sh
+bash install-event-tools.shchmod +x install-*.sh
+bash install-all.sh
